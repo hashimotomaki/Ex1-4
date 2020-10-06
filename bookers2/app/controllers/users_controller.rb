@@ -3,7 +3,7 @@
      before_action :ensure_correct_user, only: [:update, :edit]
 
      def show
-       @user = current_user
+       @user = User.find(params[:id])
        @books = current_user.books
        @book = Book.new
      end
