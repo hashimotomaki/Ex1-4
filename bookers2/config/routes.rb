@@ -7,4 +7,6 @@ Rails.application.routes.draw do
   resources :books
   post 'follow/:id' => 'relationships#follow', as: 'follow' # フォローする
   post 'unfollow/:id' => 'relationships#unfollow', as: 'unfollow' # フォロー外す
+  get 'user/follows/:id' => 'relationships#follows', as: 'follows'
+  get 'user/followers/:id'=> 'relationships#followers', as: 'followers'
 end
