@@ -2,6 +2,7 @@ class RelationshipsController < ApplicationController
   def follow
     current_user.follow(params[:id])
     redirect_to users_path
+
   end
 
   def unfollow
@@ -20,3 +21,4 @@ class RelationshipsController < ApplicationController
     @users = @user.follower
   end
 end
+
